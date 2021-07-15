@@ -1,24 +1,30 @@
 console.log("hello")
 
+//Array of containers that have Q&A
+const allQuestionElements = document.querySelectorAll(".container-border-bottom");
 
-const downArrow = document.getElementsByClassName("fa-chevron-down");
-console.log(downArrow);
 
-const questionElement = document.querySelector(".container-border-bottom");
-const arrowIcon = document.querySelector("i");
-console.log(arrowIcon);
+//event handler
 
 const expandMenu = (e) => {
     console.log(e);
-    let target = e.toElement; 
-    console.log(target);
 
-    answer = questionElement.lastElementChild
-    answer.classList.toggle("hidden");
+    //assigns the target as clicked element within the event listener range
+    let target = e.toElement; 
+    if(target.classList == "fas fa-chevron-down") {
+        console.log("the icon area was clicked");
+        answer = target.parentElement.parentElement.lastElementChild; 
+        console.log(answer + "this is the new element being toggled");
+        answer.classList.toggle("hidden");
+    } else {
+        console.log("this area is not an event listener atrea");
+    }
 
 }
-
-questionElement.addEventListener("click", expandMenu);
+allQuestionElements.forEach((question => {
+    question.addEventListener("click", expandMenu);
+}));
+// questionElement.addEventListener("click", expandMenu);
 
 
 // downArrow.addEventListener("click", test);
