@@ -4,39 +4,42 @@ console.log("hello")
 const allQuestionElements = document.querySelectorAll(".container-border-bottom");
 
 
-//event handler
+//event handler for question and answer menu 
 
 const expandMenu = (e) => {
     console.log(e);
-
-    //assigns the target as clicked element within the event listener range
-    let target = e.toElement; 
-    if(target.classList == "fas fa-chevron-down") {
+    let target = e.toElement;
+    if (target.classList == "fas fa-chevron-down") {
         console.log("the icon area was clicked");
-        answer = target.parentElement.parentElement.lastElementChild; 
-        console.log(answer + "this is the new element being toggled");
+        answer = target.parentElement.parentElement.lastElementChild;
         answer.classList.toggle("hidden");
-    } else {
-        console.log("this area is not an event listener atrea");
     }
-
 }
 allQuestionElements.forEach((question => {
     question.addEventListener("click", expandMenu);
 }));
-// questionElement.addEventListener("click", expandMenu);
 
+//Navigation menu 
 
-// downArrow.addEventListener("click", test);
+//icons
+const hamburgerIcon = document.querySelector(".fa-bars");
+const closeIcon = document.querySelector(".fa-times")
 
-//We need to make all the down arrow icons trigger an event handler when clicked, that toggles the .hidden class from the below p elements.
+//navigation menu
+const mobileNav = document.querySelector("nav")
+console.log(mobileNav)
+//header
+const header = document.querySelector("header");
 
-//Target the parent and store in a variable (container border bottom)
+//event handler
+const showNav = () => {
+    mobileNav.classList.toggle("background-transparent-blue");
+    header.classList.toggle("hidden");
+}
 
+hamburgerIcon.addEventListener("click", showNav);
+closeIcon.addEventListener("click", showNav)
 
-//if the target is an i element, run the function
-// take the parent element's last child (p) and toggle the .hidden class
+//create event listener to toggle .hidden class
 
-//Bind the event handler to the parent (container-border-bottom) with click event
-
-//will need to use e as parameter for event handler
+//bind event to handler
