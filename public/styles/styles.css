@@ -213,6 +213,11 @@ nav a:hover {
     border-bottom: 1.5px solid lightgray;
 }
 .nav-footer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     background-color: var(--veryDarkBlue);
     color: white; 
     padding-top: 30px;
@@ -222,9 +227,11 @@ nav a:hover {
     padding: 0; 
 }
 .nav-footer li {
+    text-align: center;
+    text-transform: uppercase;
     list-style: none; 
     font-weight: 200;
-    padding: 18px 0;
+    padding: 15px 0;
     font-size: 15px;
     letter-spacing: 1.5px;
 }
@@ -234,6 +241,10 @@ nav a:hover {
 svg {
     margin-bottom: 30px;
 }
+.nav-footer svg {
+    margin: 0 auto; 
+    margin-bottom: 20px;
+}
 div#facebook-twitter-nav-icons {
     position: absolute;
     bottom: 30px;
@@ -242,9 +253,15 @@ div#facebook-twitter-nav-icons img{
     height: 25px;
     padding: 20px;
 }
+#facebook-twitter-nav-icons-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #facebook-twitter-nav-icons-secondary img {
-    margin: 10px auto;
+    margin: 0px;
     padding: 25px;
+    padding-bottom: 40px;
 }
 .inline-icon {
     display: flex;
@@ -255,14 +272,6 @@ div#facebook-twitter-nav-icons img{
     color: var(--softBlue);
     padding-top: 20px;
 }
-/* .background-transparent-blue {
-    position: fixed;
-    height: 100%;
-    width: 100vw; 
-    z-index: 1;
-    background-color:rgba(37, 43, 70, .9);
-} */
-
 .background-shape-blue {
 
     height: 180px;
