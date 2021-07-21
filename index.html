@@ -33,7 +33,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="desktop-view">
     <img src="public/images/logo-bookmark.svg" alt="Bookmark logo">
     <i class="fas fa-bars"></i>
   </header>
@@ -65,10 +65,10 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container reverse-divs">
     <img src="public/images/illustration-hero.svg">
     <div class="background-shape-blue"></div>
-    <div>
+    <div class = "half-width">
       <h1>A Simple Bookmark Manager</h1>
       <p>
         A clean and simple interface to organize your favourite websites. Open a new
@@ -81,10 +81,10 @@
       </div>
     </div>
 
-  </div>
+  </div class="flex-col">
 
-  <div class="container">
-    <div class="container">
+  <div class="container flex-col">
+    <div class="container margins-wide">
       <h2 class="centered margin-top">Features</h2>
       <p class="centered">
         Our aim is to make it quick and easy for you to access your favourite websites.
@@ -96,13 +96,13 @@
         <a href="#" class="border-bottom">Easy Sharing</a>
       </nav>
     </div>
-    <div class="container">
+    <div class="container half-width">
 
       <img id="hero-image-secondary" src="public/images/illustration-features-tab-1.svg">
       <div class="background-shape-blue-flipped"></div>
 
     </div>
-    <div class="container">
+    <div class="container half-width">
       <h2 class="centered margin-top-negative">Bookmark in one click</h2>
       <p class="centered">
         Organize your bookmarks however you like. Our simple drag-and-drop interface
@@ -127,9 +127,9 @@
     More Info -->
   </div>
 
-  <div class="container">
+  <div class="container flex-col">
     <h2 class="centered margin-top">Download the extension</h2>
-    <p> We’ve got more browsers in the pipeline. Please do let us know if you’ve
+    <p class="full-width"> We’ve got more browsers in the pipeline. Please do let us know if you’ve
       got a favourite you’d like us to prioritize.</p>
 
     <div class="container-card">
@@ -140,7 +140,7 @@
         <button class="blue-button">Add & Install Extension</button>
     </div>
 
-    <div class="container-card">
+    <div class="container-card" id="card2">
       <img src="public/images/logo-firefox.svg">
       <h2 class="centered">Add to Firefox</h3>
         <p>Minimum version 55</p>
@@ -148,7 +148,7 @@
         <button class="blue-button">Add & Install Extension</button>
     </div>
 
-    <div class="container-card">
+    <div class="container-card" id="card3">
       <img src="public/images/logo-opera.svg">
       <h2 class="centered">Add to Opera</h3>
         <p>Minimum version 46</p>
@@ -157,7 +157,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" id="container-faq">
     <h2 class="centered margin-top">Frequently Asked Questions</h2>
 
     <p>Here are some of our FAQs. If you have any other questions you’d like
@@ -223,8 +223,9 @@
     <h5 class="centered">35,000+ already joined</h5>
     <h3 class="centered white">Stay up-to-date with what we’re doing</h2>
       <form>
-        <input type="email" id="email" name="email" placeholder="Enter your email address">
-        <input type="submit" value="Contact Us" class="white">
+        <input id = "userEmail" type="text" id="userEmail" name="email" placeholder="Enter your email address" >
+        <div id="error hidden"> </div>
+        <input id = "subButton" type="submit" value="Contact Us" class="white">
       </form>
 
   </div>
@@ -241,7 +242,7 @@
         </g>
       </g>
     </svg>
-    <div>
+    <div id="footer-nav-list">
       <ul>
         <li>Features</li>
         <li>Pricing</li>
