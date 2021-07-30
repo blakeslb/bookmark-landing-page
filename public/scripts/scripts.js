@@ -60,3 +60,5 @@ validateEmail();
 //if its not an email, add class to show error
 //bind to submit button listener
 
+//-------------------------------------------------
+

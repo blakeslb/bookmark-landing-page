@@ -95,6 +95,15 @@ button {
     margin-bottom: 80px;
 
 }
+#login{
+    width: 100px;
+    background-color: var(--softRed);
+    border: 2px solid var(--softRed);
+    border-radius: 5px;
+    color: white; 
+    height: 30px;
+    padding: 5px 5px;
+}
 div.dotted-line-image {
    
     width: 100%;
@@ -215,6 +224,14 @@ nav a:hover {
 /* adds bottom border on last link in secondary nav */
 .border-bottom {
     border-bottom: 1.5px solid lightgray;
+}
+#border-bottom-red {
+    border-bottom: 4px solid red;
+    position: absolute;
+    width: 50px;
+    left: 25%;
+    margin: 15px auto;
+         
 }
 .nav-footer {
 
@@ -449,10 +466,34 @@ form input {
     font-size: 16px;
     padding: 0;
     padding-bottom: 10px;
-    text-align: center; 
-
-    
+    text-align: center;    
 }
+.nav-secondary a:hover {
+    color:red;
+    cursor: pointer; 
+}
+/* button hovers */
+button:hover {
+    background-color: white;
+    border-color: #333;
+    color: #333; 
+    font-weight: 600;
+    cursor: pointer;
+}
+.blue-button:hover {
+    background-color: white;
+    border-color: var(--softBlue);
+    color: var(--softBlue); 
+    font-weight: 600;
+
+}
+.button-short:hover {
+    background-color: var(--softBlue);
+    border-color: none;
+    color: white;
+    font-weight: 400;
+}
+/* ------------- */
 .margins-wide {
     margin: 0 auto;
     width: 100%;

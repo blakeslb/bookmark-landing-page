@@ -12,9 +12,8 @@ This is a partial solution to the [Bookmark landing page challenge on Frontend M
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### Continued development
 
-This current iteration is mobile only at 375px. Tablet and desktop breakpoints are in development. 
+This current iteration is mobile and desktop responsive. Functionality for the desktop screen size is coming soon!
