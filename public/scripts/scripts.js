@@ -1,4 +1,3 @@
-console.log("hello")
 
 //Array of containers that have Q&A
 const allQuestionElements = document.querySelectorAll(".container-border-bottom");
@@ -7,7 +6,9 @@ const allQuestionElements = document.querySelectorAll(".container-border-bottom"
 
 const expandMenu = (e) => {
     console.log(e);
-    let target = e.toElement;
+    let target = e.srcElement;
+    console.log(target);
+
     if (target.classList == "fas fa-chevron-down") {
         console.log("the icon area was clicked");
         answer = target.parentElement.parentElement.lastElementChild;
@@ -51,7 +52,7 @@ const validateEmail = (email) => {
     errMessage.innerHTML = "Whoops, make sure it's an email"
 //     
     }
-//     };
+//     ;
 
 subButton.addEventListener("click", validateEmail)
 validateEmail();
